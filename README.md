@@ -2,5 +2,8 @@
 [![Actions Status](https://github.com/Kosmos3-14/fullstack-javascript-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Kosmos3-14/fullstack-javascript-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/09a2890a3942ca430564/maintainability)](https://codeclimate.com/github/Kosmos3-14/fullstack-javascript-project-44/maintainability)
 
-### Демонстрация:
+### Демонстрация brain-even:
 [![asciicast](https://asciinema.org/a/8pmqqwoZko931LLwfkZHqzZRR.svg)](https://asciinema.org/a/8pmqqwoZko931LLwfkZHqzZRR)
+
+### Демонстрация brain-calc:
+[![asciicast](https://asciinema.org/a/ffaIxf1cSzfr2kcFmrxeWV9n2.svg)](https://asciinema.org/a/ffaIxf1cSzfr2kcFmrxeWV9n2)

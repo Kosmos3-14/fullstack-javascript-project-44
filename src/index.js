@@ -1,14 +1,14 @@
 import readlineSync from 'readline-sync';
 
-const isEvenGame = () => {
+const commonScript = (rulesOfCurrentGame, randomQuestionGenerator, correctAnswerFunc) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!\nAnswer "yes" if the number is even, otherwise answer "no".`);
+  console.log(`Hello, ${name}!\n${rulesOfCurrentGame}`);
   for (let i = 0; i < 3; i += 1) {
-    const randomNumber = Math.round(Math.random() * 1000);
-    console.log(`Question: ${randomNumber}`);
+    const randomQuestion = randomQuestionGenerator();
+    console.log(`Question: ${randomQuestion}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = (randomNumber % 2 === 0) ? 'yes' : 'no';
+    const correctAnswer = correctAnswerFunc(randomQuestion);
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
@@ -19,4 +19,4 @@ const isEvenGame = () => {
   console.log(`Congratulations, ${name}!`);
 };
 
-export default isEvenGame;
+export default commonScript;
