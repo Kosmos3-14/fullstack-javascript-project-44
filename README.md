@@ -7,3 +7,6 @@
 
 ### Демонстрация brain-calc:
 [![asciicast](https://asciinema.org/a/ffaIxf1cSzfr2kcFmrxeWV9n2.svg)](https://asciinema.org/a/ffaIxf1cSzfr2kcFmrxeWV9n2)
+
+### Демонстрация brain-gcd:
+[![asciicast](https://asciinema.org/a/mVGi061gC7Qo8pxQuyDO60DZ5.svg)](https://asciinema.org/a/mVGi061gC7Qo8pxQuyDO60DZ5)
