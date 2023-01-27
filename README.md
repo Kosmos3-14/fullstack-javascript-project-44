@@ -13,3 +13,6 @@
 
 ### Демонстрация brain-progression:
 [![asciicast](https://asciinema.org/a/6aLYAPlscfBP78ALLOPqMnMPu.svg)](https://asciinema.org/a/6aLYAPlscfBP78ALLOPqMnMPu)
+
+### Демонстрация brain-prime:
+[![asciicast](https://asciinema.org/a/Gb0Rj8aVXMhmR5lxzVWWC1ynw.svg)](https://asciinema.org/a/Gb0Rj8aVXMhmR5lxzVWWC1ynw)

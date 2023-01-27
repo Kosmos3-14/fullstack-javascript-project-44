@@ -6,8 +6,8 @@ const brainProgressionGame = () => {
   let correctAnswer;
   const randomQuestionGenerator = () => {
     const progression = [];
-    const firstNum = Math.floor(Math.random() * 10);
-    const commonDiff = Math.floor(Math.random() * 5) + 1;
+    const firstNum = Math.floor(Math.random() * 100);
+    const commonDiff = Math.floor(Math.random() * 10) + 1;
     for (let i = 0; i < 10; i += 1) {
       progression.push(firstNum + (commonDiff * i));
     }
