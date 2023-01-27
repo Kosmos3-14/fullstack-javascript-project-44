@@ -12,36 +12,20 @@ const brainGcdGame = () => {
   };
 
   const correctAnswerFunc = () => {
-    let correctAnswer;
-    if (firstRandomNum >= secondRandomNum && firstRandomNum % secondRandomNum === 0) {
-      correctAnswer = secondRandomNum;
+    let min = Math.min(firstRandomNum, secondRandomNum);
+    const max = Math.max(firstRandomNum, secondRandomNum);
+    if (max === min || max % min === 0) {
+      return min;
     }
-    if (firstRandomNum > secondRandomNum) {
-      let remainder = firstRandomNum % secondRandomNum;
-      let devider = remainder;
-      while (remainder > 0) {
-        devider = remainder;
-        remainder = secondRandomNum % remainder;
-        secondRandomNum = devider;
-      }
-      correctAnswer = devider;
+    let remainder = max % min;
+    let devider = remainder;
+    while (remainder > 0) {
+      devider = remainder;
+      remainder = min % remainder;
+      min = devider;
     }
-    if (secondRandomNum > firstRandomNum && secondRandomNum % firstRandomNum === 0) {
-      correctAnswer = firstRandomNum;
-    }
-    if (secondRandomNum > firstRandomNum) {
-      let remainder = secondRandomNum % firstRandomNum;
-      let devider = remainder;
-      while (remainder > 0) {
-        devider = remainder;
-        remainder = firstRandomNum % remainder;
-        firstRandomNum = devider;
-      }
-      correctAnswer = devider;
-    }
-    return String(correctAnswer);
+    return devider.toString();
   };
-
   commonScript(rulesOfCurrentGame, randomQuestionGenerator, correctAnswerFunc);
 };
 
