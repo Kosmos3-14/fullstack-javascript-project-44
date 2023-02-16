@@ -27,7 +27,6 @@ const runBrainCalcGame = () => {
       default:
         break;
     }
-
     return [question, String(correctAnswer)];
   };
 
