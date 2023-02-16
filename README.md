@@ -1,18 +1,53 @@
+## Brain-games
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Kosmos3-14/fullstack-javascript-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Kosmos3-14/fullstack-javascript-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/09a2890a3942ca430564/maintainability)](https://codeclimate.com/github/Kosmos3-14/fullstack-javascript-project-44/maintainability)
 
-### Демонстрация brain-even:
+### system requirements:
+
+Node.js, npm package manager.
+
+### Setup:
+
+Use 'git clone' command, to copy the repository to your local computer.
+
+```bash
+make install
+```
+```bash
+npm link
+```
+
+To globally install a package, use the 'npm link' command. It should be run from the root directory of the package. The 'npm link' command may require starting with sudo.
+
+### Running the games:
+
+To start the game, use one of the following commands. It can be run from any directory.
+
+```bash
+brain-even
+
+brain-calc
+
+brain-gcd
+
+brain-progression
+
+brain-prime
+```
+
+### Brain-even demonstration:
 [![asciicast](https://asciinema.org/a/8pmqqwoZko931LLwfkZHqzZRR.svg)](https://asciinema.org/a/8pmqqwoZko931LLwfkZHqzZRR)
 
-### Демонстрация brain-calc:
+### Brain-calc demonstration:
 [![asciicast](https://asciinema.org/a/ffaIxf1cSzfr2kcFmrxeWV9n2.svg)](https://asciinema.org/a/ffaIxf1cSzfr2kcFmrxeWV9n2)
 
-### Демонстрация brain-gcd:
+### Brain-gcd demonstration:
 [![asciicast](https://asciinema.org/a/mVGi061gC7Qo8pxQuyDO60DZ5.svg)](https://asciinema.org/a/mVGi061gC7Qo8pxQuyDO60DZ5)
 
-### Демонстрация brain-progression:
+### Brain-progression demonstration:
 [![asciicast](https://asciinema.org/a/6aLYAPlscfBP78ALLOPqMnMPu.svg)](https://asciinema.org/a/6aLYAPlscfBP78ALLOPqMnMPu)
 
-### Демонстрация brain-prime:
+### Brain-prime demonstration:
 [![asciicast](https://asciinema.org/a/Gb0Rj8aVXMhmR5lxzVWWC1ynw.svg)](https://asciinema.org/a/Gb0Rj8aVXMhmR5lxzVWWC1ynw)
