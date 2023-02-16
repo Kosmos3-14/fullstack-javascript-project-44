@@ -25,8 +25,8 @@ const runBrainCalcGame = () => {
         correctAnswer = firstRandomNumber * secondRandomNumber;
         break;
       default:
-        break;
     }
+
     return [question, String(correctAnswer)];
   };
 
