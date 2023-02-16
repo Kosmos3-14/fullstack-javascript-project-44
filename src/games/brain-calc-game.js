@@ -8,7 +8,6 @@ const runBrainCalcGame = () => {
     const firstRandomNumber = getRandomInRange(1, 100);
     const secondRandomNumber = getRandomInRange(1, 100);
     const randomOperator = getRandomInRange(1, 3);
-
     let question;
     let correctAnswer;
 
