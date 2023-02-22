@@ -1,36 +1,36 @@
 import runEngine from '../index.js';
 import getRandomInRange from '../utils.js';
 
-const runBrainCalcGame = () => {
-  const rulesOfCurrentGame = 'What is the result of the expression?';
+const rulesOfCurrentGame = 'What is the result of the expression?';
 
-  const generateRound = () => {
-    const firstRandomNumber = getRandomInRange(1, 100);
-    const secondRandomNumber = getRandomInRange(1, 100);
-    const randomOperator = getRandomInRange(1, 3);
-    let question;
-    let correctAnswer;
-
-    switch (randomOperator) {
-      case 1:
-        question = `${firstRandomNumber} + ${secondRandomNumber}`;
-        correctAnswer = firstRandomNumber + secondRandomNumber;
-        break;
-      case 2:
-        question = `${firstRandomNumber} - ${secondRandomNumber}`;
-        correctAnswer = firstRandomNumber - secondRandomNumber;
-        break;
-      case 3:
-        question = `${firstRandomNumber} * ${secondRandomNumber}`;
-        correctAnswer = firstRandomNumber * secondRandomNumber;
-        break;
-      default:
-    }
-
-    return [question, String(correctAnswer)];
-  };
-
-  runEngine(rulesOfCurrentGame, generateRound);
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  return operators[getRandomInRange(0, operators.length - 1)];
 };
 
-export default runBrainCalcGame;
+const calculation = (firstNumber, secondNumber, operator) => {
+  switch (operator) {
+    case '+':
+      return firstNumber + secondNumber;
+    case '-':
+      return firstNumber - secondNumber;
+    case '*':
+      return firstNumber * secondNumber;
+    default:
+      throw new Error(`Operator ${operator} - is incorrect!`);
+  }
+};
+
+const generateRound = () => {
+  const num1 = getRandomInRange(1, 100);
+  const num2 = getRandomInRange(1, 100);
+  const operator = getRandomOperator();
+  const question = `${num1} ${operator} ${num2}`;
+  const correctAnswer = String(calculation(num1, num2, operator));
+
+  return [question, String(correctAnswer)];
+};
+
+export default () => {
+  runEngine(rulesOfCurrentGame, generateRound);
+};
