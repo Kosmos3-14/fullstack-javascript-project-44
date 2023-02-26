@@ -1,7 +1,7 @@
 import runEngine from '../index.js';
 import getRandomInRange from '../utils.js';
 
-const rulesOfCurrentGame = 'What is the result of the expression?';
+const gameRules = 'What is the result of the expression?';
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -28,9 +28,9 @@ const generateRound = () => {
   const question = `${num1} ${operator} ${num2}`;
   const correctAnswer = String(calculation(num1, num2, operator));
 
-  return [question, String(correctAnswer)];
+  return [question, correctAnswer];
 };
 
 export default () => {
-  runEngine(rulesOfCurrentGame, generateRound);
+  runEngine(gameRules, generateRound);
 };

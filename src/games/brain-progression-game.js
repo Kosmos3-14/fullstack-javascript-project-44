@@ -1,7 +1,7 @@
 import runEngine from '../index.js';
 import getRandomInRange from '../utils.js';
 
-const rulesOfCurrentGame = 'What number is missing in the progression?';
+const gameRules = 'What number is missing in the progression?';
 
 const createProgression = (firstNum, commonDiff, progressionLength) => {
   const progression = [];
@@ -17,12 +17,12 @@ const generateRound = () => {
   const commonDiff = getRandomInRange(1, 10);
   const progression = createProgression(firstNum, commonDiff, progressionLength);
   const hiddenNumIndex = getRandomInRange(0, progressionLength - 1);
-  const correctAnswer = progression[hiddenNumIndex];
+  const correctAnswer = String(progression[hiddenNumIndex]);
   progression[hiddenNumIndex] = '..';
   const question = progression.join(' ');
-  return [question, String(correctAnswer)];
+  return [question, correctAnswer];
 };
 
 export default () => {
-  runEngine(rulesOfCurrentGame, generateRound);
+  runEngine(gameRules, generateRound);
 };

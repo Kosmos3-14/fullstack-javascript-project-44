@@ -1,7 +1,7 @@
 import runEngine from '../index.js';
 import getRandomInRange from '../utils.js';
 
-const rulesOfCurrentGame = 'Find the greatest common divisor of given numbers.';
+const gameRules = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (first, second) => {
   if (second === 0) {
@@ -20,5 +20,5 @@ const generateRound = () => {
 };
 
 export default () => {
-  runEngine(rulesOfCurrentGame, generateRound);
+  runEngine(gameRules, generateRound);
 };
